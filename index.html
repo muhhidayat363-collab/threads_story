@@ -92,6 +92,11 @@ input,textarea{border-radius:12px}
 .cfg{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
 .cfgt{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.25rem;line-height:1.2}
 .cfgs{margin:6px 0 0;color:var(--mu);font-size:.9rem}
+.hk-wrap{margin-top:22px;border:1px solid var(--line);border-radius:22px;padding:18px;background:var(--glass)}
+.hk-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-family:"Fredoka",system-ui,sans-serif;font-size:1.1rem}
+.hk-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px dashed var(--line)}
+.hk-text{flex:1;line-height:1.55}
+.hk-cp,.hk-all{border:1px solid var(--line);background:var(--chip);color:var(--tx);border-radius:999px;padding:7px 14px;font-family:"Fredoka",system-ui,sans-serif;font-size:.8rem;cursor:pointer;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -114,28 +119,17 @@ input,textarea{border-radius:12px}
 <span class="lbl" id="el">Emosi dominan</span>
 <div class="chips" id="emosi" role="radiogroup" aria-labelledby="el"></div>
 <input id="emosiVal" type="hidden" value="Bahagia">
-<span class="lbl" id="tl">Target pembaca</span>
-<div class="chips" id="target" role="radiogroup" aria-labelledby="tl"></div>
-<input id="targetVal" type="hidden" value="Publik">
 <button class="go" id="go">Buat postingan</button>
 </div>
 
 <div id="out" aria-live="polite"></div>
-<p class="note">Periksa dulu hasilnya, pastikan isinya sesuai fakta produk, lalu link Shopee otomatis disisipkan di tengah cerita (sekitar 200 kata per draf).</p>
+<p class="note">Periksa dulu hasilnya, pastikan isinya sesuai fakta produk, lalu link otomatis ditaruh di bagian CTA (total sekitar 200 kata).</p>
 </main>
 
 <script>
 const $ = id => document.getElementById(id);
 const EMOSI = ["😊 Bahagia","🥹 Haru","😂 Lucu","🤔 Penasaran","😤 Kesal","😢 Sedih","😌 Lega","🕰️ Nostalgia"];
 const EMO2STY = {"😊 Bahagia":"Hal kecil yang bikin hari lebih enak","🥹 Haru":"Lagi galau, lalu nemu solusi","😂 Lucu":"Cerita lucu sehari-hari","🤔 Penasaran":"Pertanyaan pemancing komentar","😤 Kesal":"Kesalahan yang aku sesali","😢 Sedih":"Lagi galau, lalu nemu solusi","😌 Lega":"Sebelum dan sesudah pakai","🕰️ Nostalgia":"Curhat santai ke teman"};
-const TARGET = [["Publik","🌍 Publik"],["Privasi","🔒 Privasi"],["Ibu-ibu","👩 Ibu-ibu"],["Anak-anak","🧒 Anak-anak"],["Bapak-bapak","👨 Bapak-bapak"]];
-const TARGETDESC = {
-"Publik":"PUBLIK. Tulis untuk pembaca umum di Threads: terbuka, relatable untuk banyak orang, boleh menyapa pembaca dan diakhiri ajakan ringan berinteraksi.",
-"Privasi":"PRIVASI. Tulis terasa personal dan intim, seperti curhat pelan ke satu orang kepercayaan. Jangan menyapa khalayak ramai (hindari gaes/guys/kalian) dan jangan mengajak orang ramai-ramai berinteraksi.",
-"Ibu-ibu":"IBU-IBU. Nada hangat dan akrab seperti ngobrol antar ibu (boleh sapaan bunda/mama/bu). Angkat situasi yang dekat dengan ibu: urusan rumah, dapur, anak, dan hemat belanja.",
-"Anak-anak":"ANAK-ANAK. Bahasa sangat sederhana dengan kalimat pendek, ceria, dan ramah anak. Tanpa slang berlebihan, tanpa konten dewasa, dan jangan mendorong anak membeli sendiri; ajak mereka minta izin atau minta tolong orang tua untuk melihat link.",
-"Bapak-bapak":"BAPAK-BAPAK. Nada santai ala obrolan bapak-bapak: praktis, to the point, sedikit humor receh. Angkat situasi yang dekat dengan bapak: kerjaan, rumah, kendaraan, hobi, dan tanggung jawab keluarga."
-};
 
 function buatChip(wadah, hidden, items, nilai){
   items.forEach((it, i) => {
@@ -152,7 +146,6 @@ function buatChip(wadah, hidden, items, nilai){
   $(hidden).value = Array.isArray(items[0]) ? items[0][0] : items[0];
 }
 buatChip("emosi","emosiVal",EMOSI);
-buatChip("target","targetVal",TARGET);
 
 const LOGO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.4 13.3C19.4 8.6 16.3 4.4 11.9 4.4 7.6 4.4 4.4 7.9 4.4 12c0 4.3 3.1 7.6 7.7 7.6 1.9 0 3.5-.6 4.8-1.7"/><circle cx="12" cy="12.2" r="3.1"/><path d="M15.1 9.2v4.4c0 1.5 1.1 2.4 2.5 2.4 1.5 0 1.8-1.5 1.8-2.7"/></svg>';
 document.querySelectorAll("#plat .chip").forEach(b=>{b.onclick=()=>{
@@ -183,7 +176,7 @@ function tampil(daftar){
     if (i < daftar.length - 1){ const s = document.createElement("div"); s.className = "stem"; side.appendChild(s); }
     const body = document.createElement("div"); body.className = "body";
     const who = document.createElement("div"); who.className = "who";
-    who.innerHTML = "kamu <span>· Versi " + (i + 1) + "</span>";
+    who.innerHTML = "kamu <span>· " + (["1 · Hook","2 · Agitate","3 · Solusi","4 · CTA"][i]||("Versi "+(i+1))) + "</span>";
     const p = document.createElement("p"); p.className = "post"; p.textContent = teks;
     const r = document.createElement("div"); r.className = "row";
     const n = document.createElement("span"); n.className = "cnt"; n.textContent = teks.trim().split(/\s+/).length + " kata";
@@ -191,6 +184,8 @@ function tampil(daftar){
     b.onclick = () => salin(teks, b);
     r.append(n, b); body.append(who, p, r); t.append(side, body); out.appendChild(t);
   });
+  const all = document.createElement("button"); all.type = "button"; all.className = "hk-all"; all.style.marginTop = "10px"; all.textContent = "Salin cerita lengkap (1-4)";
+  all.onclick = () => salinTeks(daftar.join("\n\n"), all, "Salin cerita lengkap (1-4)"); out.appendChild(all);
 }
 
 function galat(pesan){
@@ -374,41 +369,90 @@ async function tulisAI(prod,manf,emosi,target,link){
   const tipe=analisaProduk(nama+" "+manf+" "+info.slug);
   const prompt=`Kamu penulis konten Threads Indonesia yang jago bercerita dengan bahasa gaul santai (aku/kamu/gue, nggak, banget, sumpah, dll).
 
-Tulis TEPAT 3 postingan Threads yang berbeda total untuk produk ini:
+Tulis SATU cerita Threads yang dibagi TEPAT 4 bagian dengan rumus Hook, Agitate, Solusi, CTA untuk produk ini:
 - Nama produk: ${nama||"(tidak terbaca dari link; cari tahu dari info halaman atau web search)"}
-- Link Shopee: ${link}
+- Link produk: ${link}
 - Jenis produk (perkiraan): ${tipe==="umum"?"tidak diketahui, simpulkan dari nama":tipe}
 ${manf?"- Manfaat utama dari penjual: "+manf:"- Manfaat utama: simpulkan sendiri dari jenis produk dan info halaman. Jangan mengarang spesifikasi, angka, atau klaim yang tidak pasti."}
 ${info.slug?"- Nama dari URL Shopee: "+info.slug:""}
 
 Emosi dominan: "${emosi}". Rasa ini harus terasa kuat dari kalimat pertama sampai penutup.
 
-Target pembaca: ${TARGETDESC[target]||TARGETDESC["Publik"]}
 
 Aturan:
-1. Setiap postingan 170-210 kata (hitung dengan teliti), berbentuk cerita panjang beralur: pembuka, situasi/konflik, momen menemukan produk, dampak yang dirasakan, penutup hangat. Ini ukuran paling penting.
-2. Isinya CERITA nyata terasa seperti pengalaman pribadi, bukan iklan. Pembaca harus tenggelam di cerita dulu; produk muncul alami di tengah, ajakan cek link cukup 1 kalimat pendek di akhir yang menyebut link ada di bawah (kalimat ajakan ini WAJIB jadi kalimat TERAKHIR; sistem akan memindahkannya ke tengah cerita).
-3. Ketiganya wajib berbeda: pembukaan, adegan/situasi, sudut pandang, dan pilihan kata. Jangan ada frasa yang sama antar postingan dan jangan pakai klise iklan ("worth it banget", "wajib punya", "sebelum kehabisan").
+1. Total seluruh cerita 170-210 kata dengan pembagian: bagian 1 HOOK (1-2 kalimat, 20-35 kata, kalimat pembuka yang bikin orang berhenti scroll), bagian 2 AGITATE (60-80 kata, perdalam masalah dan emosi sampai pembaca merasa "ini aku banget"), bagian 3 SOLUSI (60-80 kata, produk hadir alami sebagai jawaban dengan manfaat nyata), bagian 4 CTA (20-30 kata, ajakan ringan untuk cek link di bawah). Ini ukuran paling penting.
+2. Isinya CERITA nyata terasa seperti pengalaman pribadi, bukan iklan. Empat bagian harus nyambung jadi satu alur. Ajakan cek link HANYA ada di bagian 4 (CTA).
+3. Jangan mengulang kalimat atau frasa yang sama antar bagian dan jangan pakai klise iklan ("worth it banget", "wajib punya", "sebelum kehabisan").
 4. Gunakan detail spesifik yang masuk akal sesuai jenis produk. Jangan mengarang fakta yang bisa dicek: harga, angka diskon, durasi garansi, klaim medis, nama merek lain, atau testimoni orang lain.
 5. Maksimal 2 emoji per postingan. Jangan sertakan URL (akan ditambahkan otomatis). Tanpa hashtag.
 6. Jangan bawa-bawa topik sensitif (agama, politik, SARA).
 7. JANGAN menyalin kata-kata "Manfaat utama" mentah-mentah. Olah ulang dengan bahasamu sendiri: pakai sinonim gaul, perumpamaan, atau adegan kecil. Tiap postingan angkat sudut manfaat yang berbeda dan pakai pilihan kata gaul yang berbeda (misal banget/parah/pol, nggak/gak, bikin/ngasih, enak/adem/mantul).
-9. Pahami fungsi dan cara penggunaan produk secara masuk akal. Furnitur seperti meja, kursi, rak itu ditaruh/dipasang di kamar, ruang kerja, atau ruang tengah (misal meja ditaruh di pojok kamar dekat komputer), BUKAN "dipakai" seperti baju. Baju dipakai, kursi diduduki, lampu dipasang, makanan dimakan. Jangan pernah pakai kata kerja yang janggal untuk produknya.
-8. Boleh pakai slang kekinian yang wajar (sumpah, gaes, auto, kepo, mantul, receh), tapi jangan berlebihan dan tetap enak dibaca.
+8. Pahami fungsi dan cara penggunaan produk secara masuk akal. Furnitur seperti meja, kursi, rak itu ditaruh/dipasang di kamar, ruang kerja, atau ruang tengah (misal meja ditaruh di pojok kamar dekat komputer), BUKAN "dipakai" seperti baju. Baju dipakai, kursi diduduki, lampu dipasang, makanan dimakan. Jangan pernah pakai kata kerja yang janggal untuk produknya.
+9. Boleh pakai slang kekinian yang wajar (sumpah, gaes, auto, kepo, mantul, receh), tapi jangan berlebihan dan tetap enak dibaca.
 
-Balas HANYA JSON array berisi 3 string, tanpa teks lain.`;
+Balas HANYA JSON array berisi 4 string berurutan: hook, agitate, solusi, cta. Tanpa teks lain.`;
   for(let a=0;a<2;a++){
     try{
-      const arr=await panggilAI(sample,a?prompt+"\n\nCatatan: percobaan sebelumnya panjangnya meleset. Pastikan setiap postingan 170-210 kata.":prompt);
-      if(Array.isArray(arr)&&arr.length>=3){
-        const r=arr.slice(0,3).map(x=>String(x).trim());
-        if(a===1||r.every(x=>{const w=hitungKata(x);return w>=150&&w<=240})) return r;
+      const arr=await panggilAI(sample,a?prompt+"\n\nCatatan: percobaan sebelumnya panjangnya meleset. Pastikan total seluruh cerita 170-210 kata.":prompt);
+      if(Array.isArray(arr)&&arr.length>=4){
+        const r=arr.slice(0,4).map(x=>String(x).trim());
+        if(a===1||(()=>{const w=hitungKata(r.join(" "));return w>=140&&w<=250})()) return r;
       }
     }catch(e){ if(e&&(e.code==="not_granted"||e.code==="rate_limited")) return null; }
   }
   return null;
 }
 
+
+
+const AGI=["Jujur, udah lama aku ngerasa {k} tuh gitu-gitu aja dan bikin males.","Tiap hari ketemu masalah yang sama, dan makin lama makin bikin kepala berat.","Udah coba ini itu, tapi hasilnya nggak pernah bener-bener pas.","Kadang aku cuma bisa diem, mikir kenapa urusan sepele aja bisa seribet ini.","Yang bikin tambah kesel, waktu dan tenaga kebuang tapi nggak ada perubahan.","Aku sampe mikir, apa emang harus pasrah aja sama keadaan ini?","Capeknya tuh bukan cuma fisik, tapi bikin mood naik turun seharian.","Orang bilang sabar, tapi sabar doang nggak nyelesein apa-apa.","Makin dibiarin, {k} makin berantakan dan aku makin males ngurusinnya.","Pernah nggak sih ngerasa udah usaha banyak tapi tetep mentok di titik yang sama?","Dan itu kejadian berulang-ulang, sampai aku hampir nyerah.","Tiap kali liat ke arah {k}, rasanya pengen langsung ngalihin pandangan."];
+function racikPAS(prod,manf,link,emosi,target){
+  const info=bacaLinkShopee(link), nama=(prod||info.nama||"produk ini").trim();
+  const tipe=analisaProduk(nama+" "+(manf||"")+" "+info.slug);
+  const k=KAT[tipe]||KAT.umum, isi=x=>x.replace(/\{p\}/g,()=>nama).replace(/\{k\}/g,()=>k);
+  const hook=buatHook(prod,link,emosi,target)[0];
+  const agi=acakArray(AGI).slice(0,6).map(isi).join(" ");
+  const frags=pecahManfaat((manf||"").trim()||"kualitasnya di atas ekspektasi, kepake banget tiap hari, bikin rutinitas jadi lebih gampang");
+  const man=_pk(["Yang paling kerasa tuh ","Poin favoritku: ","Intinya, "])+gaulin(_pk(frags))+".";
+  const sol=["Sampai akhirnya aku nemu "+nama+".",...acakArray(DET[tipe]||DET.umum),man,...acakArray(EXT).slice(0,3).map(isi)].join(" ");
+  const cta=isi(_pk(CTA));
+  return [hook,agi,sol,cta].map(x=>variasiGaul(x));
+}
+const HOOK_EMO={
+Bahagia:["Siapa sangka {p} bisa bikin hariku seceria ini?","Hal kecil yang bikin senyum seharian: {p} akhirnya dateng.","Pagi ini aku bangun dengan senyum, dan semuanya gara-gara {p}."],
+Haru:["Aku nggak nyangka {p} bakal bikin mataku berkaca-kaca.","Ada barang sederhana yang diam-diam bikin hatiku hangat: {p}.","Dulu aku cuma bisa mimpi punya {p}, sekarang beneran ada di depan mata."],
+Lucu:["Kocak banget, aku sampe ketawa sendiri gara-gara {p}.","Plot twist hari ini: {p} bikin seisi rumah heboh.","Aku nggak ngerti kenapa {p} bikin aku senyum-senyum kayak orang aneh."],
+Penasaran:["Kenapa ya, semua orang tiba-tiba ngomongin {p}?","Aku penasaran banget, beneran sebagus itu kah {p}?","Pertanyaan yang bikin aku susah tidur: {p} itu cocok dicoba atau cuma hype?"],
+Kesal:["Jujur aku kesel banget, kenapa nggak dari dulu aku nemu {p}.","Kesel deh, ternyata solusinya sesederhana {p}.","Aku pernah nyesel milih yang asal-asalan, makanya {p} bikin aku lega sekaligus gemes sama diri sendiri."],
+Sedih:["Hari itu aku lagi down banget, sampe {p} dateng dan ngubah suasana.","Lagi capek hati, tapi {p} ngasih alasan buat senyum lagi.","Nggak ada yang tau betapa beratnya minggu itu, sampai {p} bikin semuanya terasa lebih ringan."],
+Lega:["Akhirnya lega juga, urusan yang bikin pusing kelar gara-gara {p}.","Huft, beban kecil di pikiranku hilang sejak ada {p}.","Aku baru sadar, ternyata tenang itu bisa sesimpel punya {p}."],
+Nostalgia:["Pas buka {p}, aku langsung keinget masa-masa dulu.","Ada kenangan lama yang tiba-tiba balik gara-gara {p}.","Dulu aku sering bayangin punya {p}, dan sekarang ceritanya lengkap."]};
+const HOOK_UMUM=["Awalnya aku cuma iseng, tapi {p} ngubah rutinitasku.","Kalau ada yang nanya barang kecil paling ngaruh di {k}, jawabanku {p}.","Aku kira {p} biasa aja, ternyata salah besar.","Tiga hari sejak {p} dateng, {k} berubah total.","Ini cerita kenapa aku nggak mau lepas dari {p}.","Aku udah coba banyak cara, sampai ketemu {p}.","Pernah ngerasa {k} berantakan terus? Aku juga, sampe ada {p}.","Pertama kali liat {p}, aku langsung mikir: ini deh yang kucari."];
+function buatHook(prod,link,emosi,target){
+  const info=bacaLinkShopee(link), nama=(prod||info.nama||"produk ini").trim();
+  const k=KAT[analisaProduk(nama+" "+info.slug)]||KAT.umum;
+  const kunci=(emosi||"").replace(/^[^A-Za-z]+/,"").trim();
+  const pool=acakArray(HOOK_EMO[kunci]||[]).slice(0,3).concat(acakArray(HOOK_UMUM).slice(0,3));
+  return acakArray(pool).map(h=>variasiGaul(h.replace(/\{p\}/g,()=>nama).replace(/\{k\}/g,()=>k)));
+}
+function salinTeks(t,b,awal){
+  const ok=()=>{b.textContent="Tersalin ✓";setTimeout(()=>b.textContent=awal||"Salin",1500)};
+  const fb=()=>{const a=document.createElement("textarea");a.value=t;a.style.cssText="position:fixed;opacity:0";document.body.appendChild(a);a.select();try{document.execCommand("copy");ok()}catch(e){}a.remove()};
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok,fb); else fb();
+}
+function tampilHook(list){
+  const w=document.createElement("div"); w.className="hk-wrap";
+  w.innerHTML='<div class="hk-head"><b>🎣 Hook alternatif</b><button type="button" class="hk-all">Salin semua</button></div>';
+  list.forEach(h=>{
+    const r=document.createElement("div"); r.className="hk-item";
+    const t=document.createElement("span"); t.className="hk-text"; t.textContent=h;
+    const b=document.createElement("button"); b.type="button"; b.className="hk-cp"; b.textContent="Salin";
+    b.onclick=()=>salinTeks(h,b);
+    r.append(t,b); w.appendChild(r);
+  });
+  const all=w.querySelector(".hk-all"); all.onclick=()=>salinTeks(list.join("\n\n"),all,"Salin semua");
+  $("out").appendChild(w);
+}
 function sisipLink(teks,link){
   const p=teks.trim().replace(/([.!?])\s+(?=[A-Z"“'])/g,"$1\u0001").split("\u0001");
   if(p.length<3) return teks+"\n\n"+link;
@@ -421,7 +465,7 @@ $("go").onclick = async () => {
   const prod = $("prod").value.trim();
   const manf = "";
   const link = $("link").value.trim();
-  const emosi = $("emosiVal").value, target = $("targetVal").value, gaya = EMO2STY[emosi] || "Curhat santai ke teman";
+  const emosi = $("emosiVal").value, target = "Publik", gaya = EMO2STY[emosi] || "Curhat santai ke teman";
 
   const infoL = bacaLinkShopee(link);
   if (link && !infoL.valid){ galat($("platform").value==="tiktok"?"Link sepertinya bukan link TikTok. Tempel link dari tiktok.com atau vt.tiktok.com ya.":"Link sepertinya bukan link Shopee. Tempel link produk dari shopee.co.id atau shope.ee ya."); return; }
@@ -431,9 +475,10 @@ $("go").onclick = async () => {
 
   let posts = null;
   try { posts = await tulisAI(prod, manf, emosi, target, link); } catch (e) {}
-  if (!posts) posts = racikPostinganPintar(prod, manf, gaya, link);
+  if (!posts) posts = racikPAS(prod, manf, link, emosi, target);
   if($("platform").value==="tiktok") posts=posts.map(x=>x.replace(/Shopee/g,"TikTok"));
-  tampil(link ? posts.map(x => sisipLink(x, link)) : posts);
+  if (link) posts[3] = posts[3].trim() + "\n" + link;
+  tampil(posts);
   btn.disabled = false;
   btn.textContent = "Buat postingan";
 };
