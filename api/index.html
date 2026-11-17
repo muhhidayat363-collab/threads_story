@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Threads Story 🔥 Bikin Postingan Threads Anti Iklan</title>
+<meta name="description" content="Generator postingan Threads ala cerita, bukan iklan. Pilih emosi dominan dan target pembaca, tempel link Shopee, dapet 3 versi beda sekitar 100 kata. Tinggal salin, posting, gaskeun!">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0a'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Threads Story 🔥 Bikin Postingan Threads Anti Iklan">
+<meta property="og:description" content="Generator postingan Threads ala cerita, bukan iklan. Pilih emosi dominan dan target pembaca, tempel link Shopee, dapet 3 versi beda sekitar 100 kata. Tinggal salin, posting, gaskeun!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7f5;--bg2:#ebebe8;--glass:rgba(255,255,255,.88);--line:rgba(0,0,0,.16);--tx:#0b0b0b;--mu:#6a6a6a;--ac:#0b0b0b;--acx:#ffffff;--chip:rgba(0,0,0,.035);--chipon:#0b0b0b;--chipontx:#ffffff;--orb1:#dcdcdc;--orb2:#efefef;--orb3:#d2d2d2;--err:#b3261e;--ok:#0b0b0b;--promo:#0b0b0b;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#080808;--bg2:#151515;--glass:rgba(22,22,22,.86);--line:rgba(255,255,255,.18);--tx:#f6f6f6;--mu:#9b9b9b;--ac:#f6f6f6;--acx:#080808;--chip:rgba(255,255,255,.06);--chipon:#f6f6f6;--chipontx:#080808;--orb1:#2a2a2a;--orb2:#1c1c1c;--orb3:#333333;--err:#ff8a80;--ok:#f6f6f6;--promo:#f6f6f6}}
+:root[data-theme="dark"]{
+  --bg:#080808;--bg2:#151515;--glass:rgba(22,22,22,.86);--line:rgba(255,255,255,.18);--tx:#f6f6f6;--mu:#9b9b9b;--ac:#f6f6f6;--acx:#080808;--chip:rgba(255,255,255,.06);--chipon:#f6f6f6;--chipontx:#080808;--orb1:#2a2a2a;--orb2:#1c1c1c;--orb3:#333333;--err:#ff8a80;--ok:#f6f6f6;--promo:#f6f6f6}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--tx);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;
+  background:linear-gradient(160deg,var(--bg),var(--bg2));background-attachment:fixed;overflow-x:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(70px);opacity:.85;z-index:0;pointer-events:none}
+.o1{width:320px;height:320px;background:var(--orb1);top:-90px;right:-80px}
+.o2{width:300px;height:300px;background:var(--orb2);bottom:-100px;left:-90px}
+.o3{width:200px;height:200px;background:var(--orb3);top:42%;right:-70px;opacity:.6}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:32px 18px 56px}
+h1{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:clamp(2.1rem,9vw,2.9rem);line-height:1.08;margin:0 0 12px;letter-spacing:-.01em}
+.sub{color:var(--mu);margin:0 0 22px;max-width:44ch}
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:28px;padding:22px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);margin-bottom:18px}
+label,.lbl{display:block;font-weight:700;font-size:.88rem;margin:18px 0 7px}
+.panel>label:first-child{margin-top:0}
+input,textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:16px;background:var(--chip);color:var(--tx);font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+input::placeholder,textarea::placeholder{color:var(--mu);opacity:.75}
+input:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 4px color-mix(in srgb,var(--ac) 22%,transparent)}
+textarea{min-height:84px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.88rem;cursor:pointer;border:1px solid var(--line);background:var(--chip);color:var(--tx);border-radius:999px;padding:9px 15px;transition:background .2s,color .2s}
+.chip[aria-checked="true"]{background:var(--chipon);color:var(--chipontx);border-color:var(--chipon)}
+.chip:focus-visible,.go:focus-visible,.cp:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.go{width:100%;margin-top:24px;font:inherit;font-weight:700;font-size:1rem;cursor:pointer;border:0;border-radius:999px;padding:15px 20px;background:var(--ac);color:var(--acx);transition:transform .15s,opacity .2s}
+.go:active{transform:scale(.98)}
+.go:disabled{opacity:.6;cursor:default}
+#out{margin-top:30px}
+.thread{display:flex;gap:12px;margin-bottom:6px}
+.side{display:flex;flex-direction:column;align-items:center}
+.av{width:38px;height:38px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--orb1),var(--orb2));border:1px solid var(--line)}
+.stem{flex:1;width:2px;background:var(--line);border-radius:2px;margin:6px 0 0;min-height:16px}
+.body{flex:1;min-width:0;padding-bottom:22px}
+.who{font-weight:700;font-size:.92rem}
+.who span{color:var(--mu);font-weight:400}
+.post{white-space:pre-wrap;margin:6px 0 12px;overflow-wrap:anywhere}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cnt{color:var(--mu);font-size:.82rem}
+.cp{font:inherit;font-size:.85rem;cursor:pointer;background:var(--chip);border:1px solid var(--line);color:var(--tx);border-radius:999px;padding:7px 15px}
+.err{color:var(--err);font-weight:500}
+.note{color:var(--mu);font-size:.84rem;margin-top:26px;max-width:52ch}
+
+.topbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-bottom:16px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;padding:7px 13px;border-radius:999px;background:var(--chip);border:1px solid var(--line)}
+.badge.ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 40%,transparent)}
+.badge.lock{color:var(--err);border-color:color-mix(in srgb,var(--err) 40%,transparent)}
+
+
+
+.hidden{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.orb{opacity:.55}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.logo{width:58px;height:58px;border-radius:15px;background:var(--tx);color:var(--bg);display:grid;place-items:center;flex:none}
+.logo svg{width:34px;height:34px}
+.brandname{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.8rem;line-height:1.1;letter-spacing:.01em}
+.brandsub{display:block;font-family:"Nunito",system-ui,sans-serif;font-weight:400;font-size:.8rem;letter-spacing:.12em;color:var(--mu);margin-top:3px;text-transform:none}
+.panel{border-radius:22px;box-shadow:0 18px 50px -28px rgba(0,0,0,.35)}
+input,textarea{border-radius:12px}
+.chip{letter-spacing:.01em}
+.go{border-radius:14px;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
+.av{background:var(--tx);color:var(--bg);display:grid;place-items:center;border:0}
+.av svg{width:22px;height:22px}
+.sub{font-size:.95rem}
+.chip,.go,.cp{font-family:"Fredoka",system-ui,sans-serif;font-weight:500}
+.go{letter-spacing:.04em}
+#plat{margin-bottom:4px}
+.chip .lg{width:18px;height:18px;vertical-align:-4px;margin-right:7px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#e53935;margin-right:8px;vertical-align:0;box-shadow:0 0 0 3px rgba(229,57,53,.2)}
+.cfg{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.cfgt{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.25rem;line-height:1.2}
+.cfgs{margin:6px 0 0;color:var(--mu);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<main>
+<div class="brand"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.4 13.3C19.4 8.6 16.3 4.4 11.9 4.4 7.6 4.4 4.4 7.9 4.4 12c0 4.3 3.1 7.6 7.7 7.6 1.9 0 3.5-.6 4.8-1.7"/><circle cx="12" cy="12.2" r="3.1"/><path d="M15.1 9.2v4.4c0 1.5 1.1 2.4 2.5 2.4 1.5 0 1.8-1.5 1.8-2.7"/></svg></span><span class="brandname">Threads Story<span class="brandsub">Generator cerita untuk Threads</span></span></div>
+
+<h1>Bingung mau nulis apa di Threads? 🤔</h1>
+<p class="sub">Kami menyediakan cerita viral yang nyambung dengan link kamu. 🔥</p>
+
+<div class="panel">
+<div class="cfg"><div class="cfgt">⚙️ Konfigurasi Cerita</div><p class="cfgs">Tentukan mood arah penulisan kisah pribadimu agar optimal di Threads.</p></div>
+<span class="lbl" id="pl" style="margin-top:0">Pilih sumber link</span>
+<div class="chips" id="plat" role="radiogroup" aria-labelledby="pl"><button type="button" class="chip" role="radio" aria-checked="true" data-p="shopee"><svg class="lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 7.5h15l-1.1 12.5H5.6L4.5 7.5z" fill="#EE4D2D"/><path d="M8.3 9V7.6a3.7 3.7 0 017.4 0V9" fill="none" stroke="#EE4D2D" stroke-width="1.8" stroke-linecap="round"/><text x="12" y="17.2" font-size="9.5" font-weight="800" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif">S</text></svg>LINK SHOPEE</button><button type="button" class="chip" role="radio" aria-checked="false" data-p="tiktok"><svg class="lg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-1 .8)" stroke="#25F4EE"><path d="M15 3v10.4a3.8 3.8 0 11-3.8-3.8M15 3c.3 2.5 2 4.2 4.5 4.4"/></g><g transform="translate(1 -.8)" stroke="#FE2C55"><path d="M15 3v10.4a3.8 3.8 0 11-3.8-3.8M15 3c.3 2.5 2 4.2 4.5 4.4"/></g><g stroke="currentColor"><path d="M15 3v10.4a3.8 3.8 0 11-3.8-3.8M15 3c.3 2.5 2 4.2 4.5 4.4"/></g></g></svg>LINK TIKTOK</button></div>
+<input id="platform" type="hidden" value="shopee">
+<label for="link"><span class="dot" aria-hidden="true"></span><span id="lblLink">LINK SHOPEE</span></label>
+<input id="link" type="url" inputmode="url" placeholder="https://shope.ee/...">
+<label for="prod">NAMA PRODUK <span style="font-weight:400;color:var(--mu)">(opsional, isi kalau link pendek atau dari TikTok)</span></label>
+<input id="prod" type="text" maxlength="120" placeholder="Contoh: Meja kerja lipat minimalis">
+<span class="lbl" id="el">Emosi dominan</span>
+<div class="chips" id="emosi" role="radiogroup" aria-labelledby="el"></div>
+<input id="emosiVal" type="hidden" value="Bahagia">
+<span class="lbl" id="tl">Target pembaca</span>
+<div class="chips" id="target" role="radiogroup" aria-labelledby="tl"></div>
+<input id="targetVal" type="hidden" value="Publik">
+<button class="go" id="go">Buat postingan</button>
+</div>
+
+<div id="out" aria-live="polite"></div>
+<p class="note">Periksa dulu hasilnya, pastikan isinya sesuai fakta produk, lalu link Shopee otomatis disisipkan di tengah cerita (sekitar 200 kata per draf).</p>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const EMOSI = ["😊 Bahagia","🥹 Haru","😂 Lucu","🤔 Penasaran","😤 Kesal","😢 Sedih","😌 Lega","🕰️ Nostalgia"];
+const EMO2STY = {"😊 Bahagia":"Hal kecil yang bikin hari lebih enak","🥹 Haru":"Lagi galau, lalu nemu solusi","😂 Lucu":"Cerita lucu sehari-hari","🤔 Penasaran":"Pertanyaan pemancing komentar","😤 Kesal":"Kesalahan yang aku sesali","😢 Sedih":"Lagi galau, lalu nemu solusi","😌 Lega":"Sebelum dan sesudah pakai","🕰️ Nostalgia":"Curhat santai ke teman"};
+const TARGET = [["Publik","🌍 Publik"],["Privasi","🔒 Privasi"],["Ibu-ibu","👩 Ibu-ibu"],["Anak-anak","🧒 Anak-anak"],["Bapak-bapak","👨 Bapak-bapak"]];
+const TARGETDESC = {
+"Publik":"PUBLIK. Tulis untuk pembaca umum di Threads: terbuka, relatable untuk banyak orang, boleh menyapa pembaca dan diakhiri ajakan ringan berinteraksi.",
+"Privasi":"PRIVASI. Tulis terasa personal dan intim, seperti curhat pelan ke satu orang kepercayaan. Jangan menyapa khalayak ramai (hindari gaes/guys/kalian) dan jangan mengajak orang ramai-ramai berinteraksi.",
+"Ibu-ibu":"IBU-IBU. Nada hangat dan akrab seperti ngobrol antar ibu (boleh sapaan bunda/mama/bu). Angkat situasi yang dekat dengan ibu: urusan rumah, dapur, anak, dan hemat belanja.",
+"Anak-anak":"ANAK-ANAK. Bahasa sangat sederhana dengan kalimat pendek, ceria, dan ramah anak. Tanpa slang berlebihan, tanpa konten dewasa, dan jangan mendorong anak membeli sendiri; ajak mereka minta izin atau minta tolong orang tua untuk melihat link.",
+"Bapak-bapak":"BAPAK-BAPAK. Nada santai ala obrolan bapak-bapak: praktis, to the point, sedikit humor receh. Angkat situasi yang dekat dengan bapak: kerjaan, rumah, kendaraan, hobi, dan tanggung jawab keluarga."
+};
+
+function buatChip(wadah, hidden, items, nilai){
+  items.forEach((it, i) => {
+    const b = document.createElement("button");
+    const lbl = Array.isArray(it) ? it[1] : it, val = Array.isArray(it) ? it[0] : it;
+    b.type = "button"; b.className = "chip"; b.textContent = lbl;
+    b.setAttribute("role", "radio"); b.setAttribute("aria-checked", i === 0 ? "true" : "false");
+    b.onclick = () => {
+      $(hidden).value = val;
+      document.querySelectorAll("#" + wadah + " .chip").forEach(c => c.setAttribute("aria-checked", c === b ? "true" : "false"));
+    };
+    $(wadah).appendChild(b);
+  });
+  $(hidden).value = Array.isArray(items[0]) ? items[0][0] : items[0];
+}
+buatChip("emosi","emosiVal",EMOSI);
+buatChip("target","targetVal",TARGET);
+
+const LOGO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.4 13.3C19.4 8.6 16.3 4.4 11.9 4.4 7.6 4.4 4.4 7.9 4.4 12c0 4.3 3.1 7.6 7.7 7.6 1.9 0 3.5-.6 4.8-1.7"/><circle cx="12" cy="12.2" r="3.1"/><path d="M15.1 9.2v4.4c0 1.5 1.1 2.4 2.5 2.4 1.5 0 1.8-1.5 1.8-2.7"/></svg>';
+document.querySelectorAll("#plat .chip").forEach(b=>{b.onclick=()=>{
+  const p=b.dataset.p; $("platform").value=p;
+  document.querySelectorAll("#plat .chip").forEach(c=>c.setAttribute("aria-checked",c===b?"true":"false"));
+  $("lblLink").textContent=p==="tiktok"?"LINK TIKTOK":"LINK SHOPEE";
+  $("link").placeholder=p==="tiktok"?"https://vt.tiktok.com/...":"https://shope.ee/...";
+};});
+function salin(teks, tombol, labelOk = "Tersalin ✓", labelDefault = "Salin"){
+  const ok = () => { tombol.textContent = labelOk; setTimeout(() => tombol.textContent = labelDefault, 1500); };
+  const fallback = () => {
+    const t = document.createElement("textarea");
+    t.value = teks; document.body.appendChild(t); t.select();
+    try { document.execCommand("copy"); ok(); } catch (e) { tombol.textContent = "Salin manual"; }
+    t.remove();
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(teks).then(ok, fallback);
+  else fallback();
+}
+
+function tampil(daftar){
+  const out = $("out"); out.innerHTML = "";
+  daftar.forEach((teks, i) => {
+    const t = document.createElement("div"); t.className = "thread";
+    const side = document.createElement("div"); side.className = "side";
+    const av = document.createElement("div"); av.className = "av"; av.innerHTML = LOGO;
+    side.appendChild(av);
+    if (i < daftar.length - 1){ const s = document.createElement("div"); s.className = "stem"; side.appendChild(s); }
+    const body = document.createElement("div"); body.className = "body";
+    const who = document.createElement("div"); who.className = "who";
+    who.innerHTML = "kamu <span>· Versi " + (i + 1) + "</span>";
+    const p = document.createElement("p"); p.className = "post"; p.textContent = teks;
+    const r = document.createElement("div"); r.className = "row";
+    const n = document.createElement("span"); n.className = "cnt"; n.textContent = teks.trim().split(/\s+/).length + " kata";
+    const b = document.createElement("button"); b.className = "cp"; b.textContent = "Salin";
+    b.onclick = () => salin(teks, b);
+    r.append(n, b); body.append(who, p, r); t.append(side, body); out.appendChild(t);
+  });
+}
+
+function galat(pesan){
+  const out = $("out"); out.innerHTML = "";
+  const p = document.createElement("p"); p.className = "err"; p.textContent = pesan; out.appendChild(p);
+}
+
+function acakArray(a){const c=[...a];for(let i=c.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[c[i],c[j]]=[c[j],c[i]];}return c;}
+const pilih=a=>a[Math.floor(Math.random()*a.length)];
+const hitungKata=t=>t.trim().split(/\s+/).length;
+
+// Baca link Shopee: cek domain + ambil nama produk dari slug URL (…/Nama-Produk-i.123.456)
+function bacaLinkShopee(link){
+  const r={valid:false,nama:"",slug:""};
+  if(!link) return r;
+  try{
+    const u=new URL(link),h=u.hostname.toLowerCase();
+    const pl=($("platform")||{}).value||"shopee";r.valid=pl==="tiktok"?/(^|\.)tiktok\.com$/.test(h):(/(^|\.)shopee\.[a-z.]+$/.test(h)||/(^|\.)shope\.ee$/.test(h));
+    const mm=decodeURIComponent(u.pathname).match(/\/([^\/]+?)-i\.\d+\.\d+/);
+    if(mm){r.slug=mm[1].replace(/[-_+]+/g," ").trim();r.nama=r.slug.split(" ").slice(0,9).join(" ");}
+  }catch(e){}
+  return r;
+}
+
+const TIPE=[["meja_kerja",/meja\s+(kerja|belajar|komputer|laptop|gaming|tulis|lipat)|\bdesk\b|\bmeja\b.*\b(laptop|komputer|monitor|pc)\b/],["meja",/\bmeja\b/],["kursi",/\b(kursi|bangku)\b/],["rak",/\b(lemari|rak|nakas|laci|gantungan)\b/],["seprei",/\b(seprei|sprei|sprai|kasur|bed ?cover|selimut)\b/],["bantal_guling",/\b(bantal|guling)\b/],["pakaian",/\b(baju|kaos|celana|jaket|gamis|kemeja|hoodie|dress|hijab|kerudung|rok|daster)\b/],["skincare",/\b(serum|skincare|cream|krim|wajah|sunscreen|toner|facial|moisturizer|cushion|lipstik)\b/],["tas",/\b(tas|dompet|ransel|totebag|backpack)\b/],["sepatu",/\b(sepatu|sandal|sendal|sneakers)\b/],["dapur",/\b(panci|wajan|piring|gelas|tumbler|botol|kotak makan|blender|rice cooker|sendok|pisau|teflon|spatula|toples)\b/],["elektronik",/\b(headset|earphone|speaker|charger|kabel|lampu|kipas|mouse|keyboard|powerbank|jam tangan|tws)\b/]];
+function analisaProduk(t){t=t.toLowerCase();for(const [k,re] of TIPE) if(re.test(t)) return k;return "umum";}
+const KAT={seprei:"kasurku",bantal_guling:"tidurku",pakaian:"outfit-ku",skincare:"mukaku",tas:"barang bawaanku",sepatu:"langkahku",meja_kerja:"pojok kerjaku",meja:"sudut rumahku",kursi:"posisi dudukku",rak:"kamarku",dapur:"dapurku",elektronik:"rutinitas harianku",umum:"hari-hariku"};
+
+const DET={
+ seprei:["Bahannya halus dan adem banget di kulit, nggak bikin gerah walau kipas lagi mati. Jahitannya rapi pula.","Habis dicuci warnanya tetep awet dan nggak gampang kusut, jadi kamar keliatan rapi terus tanpa perlu disetrika.","Pas dipasang ukurannya pas di kasur, nggak melorot pas tidur gaya bebas. Kamar langsung berasa kayak hotel.","Tidur jadi lebih nyenyak, bangun pun nggak pegel-pegel. Efeknya kerasa dari malam pertama."],
+ bantal_guling:["Empuknya pas, nggak ngempis walau dipake tiap malam. Leher jadi lebih enteng pas bangun.","Isiannya padat tapi lembut, jadi kepala dan leher kerasa tersangga dengan enak.","Dipeluk pas tidur enaknya kebangetan, apalagi kalau lagi capek habis seharian beraktivitas.","Sarungnya halus dan gampang dicuci, bentuknya juga nggak gampang gepeng."],
+ pakaian:["Bahannya adem, nggak nerawang, dan jatuhnya enak dibadan. Dipake seharian pun tetep nyaman.","Jahitannya rapi, warnanya sesuai foto, dan nggak gampang luntur pas dicuci. Aman buat dipake ngampus atau nongkrong.","Gampang banget dipadu-padanin sama celana atau rok apa aja, jadi lemari nggak penuh baju yang nganggur.","Potongannya pas di badan, bikin tampilan lebih rapi tanpa kelihatan berusaha keras."],
+ skincare:["Teksturnya ringan dan cepet meresap, nggak lengket sama sekali. Cocok dipake pagi maupun malam.","Aku pake rutin dua minggu, dan kulit kerasa lebih lembap dan keliatan lebih seger.","Wanginya lembut, nggak bikin pusing, dan kulitku yang gampang rewel aman-aman aja.","Kemasannya praktis dan higienis, jadi enak dibawa ke mana-mana."],
+ tas:["Muat banyak banget, dari laptop sampe botol minum masuk semua. Bahannya juga kokoh.","Resletingnya mulus dan jahitannya kuat, jadi aman dibawa seharian tanpa takut jebol.","Modelnya simpel tapi tetep keliatan niat, bisa dipake buat kerja maupun jalan santai.","Ringan di bahu, jadi nggak bikin pegel walau dibawa lama."],
+ sepatu:["Solnya empuk dan nggak licin, jadi jalan seharian nggak bikin kaki pegel.","Bahannya ringan dan adem, dipake lama pun kaki nggak lembap.","Modelnya simpel, gampang dipadu sama outfit apa aja dari kasual sampe agak rapi.","Jahitannya rapi dan kuat, kerasa banget kalau kualitasnya nggak asal."],
+ meja_kerja:["Ditaruh di pojok kamar aja, area komputerku langsung keliatan rapi dan nggak sesak lagi.","Permukaannya lega, jadi monitor, keyboard, sama gelas kopi muat bareng tanpa saling desak.","Kakinya kokoh dan nggak goyang walau aku ngetik sambil semangat, jadi kerja lama pun tenang.","Pas dipasang di sudut ruangan, kamar yang tadinya penuh barang jadi berasa punya ruang kerja beneran."],
+ meja:["Ditaruh di ruang tengah, sudut rumah langsung keliatan lebih rapi dan niat.","Permukaannya luas, jadi barang-barang punya tempat dan nggak berserakan lagi.","Kokoh dan nggak goyang, jadi aman buat naro apa aja tanpa deg-degan.","Modelnya simpel, gampang nyatu sama kamar atau ruang keluarga yang udah ada."],
+ kursi:["Duduk lama pun punggung nggak gampang pegel, apalagi pas kerjaan lagi numpuk.","Sandarannya enak dan dudukannya empuk, jadi betah banget nongkrong di kursi ini.","Kakinya kokoh, nggak berderit, dan nggak goyang pas digeser-geser.","Ditaruh di pojok kamar aja, ruangan langsung keliatan lebih niat."],
+ rak:["Ditaruh di pojok kamar, barang-barang yang tadinya berserakan akhirnya punya rumah sendiri.","Muat banyak, dari buku sampe pernak-pernik, dan susunannya tetep rapi.","Rangkanya kokoh dan nggak oleng walau isinya lumayan penuh.","Perakitannya nggak ribet, dan kamar langsung keliatan lebih lega dan tertata."],
+ dapur:["Dipegangnya mantap dan pas di tangan, jadi urusan dapur kerasa lebih enak.","Bahannya kerasa tebal dan nggak asal-asalan, jadi tenang dipake tiap hari.","Pas dicuci nggak ribet, dan nggak gampang bau atau berubah warna.","Disimpen di rak dapur juga muat dan nggak makan tempat, jadi dapur tetep lega."],
+ elektronik:["Pas pertama dicoba langsung jalan, nggak pake ribet setting yang panjang.","Bentuknya ringkas, jadi enak ditaruh di meja kerja atau dibawa ke mana-mana.","Dipake seharian tetep adem dan nggak gampang panas, jadi tenang.","Hasilnya stabil dan nggak ngadat, jadi beneran kepake buat aktivitas harian."],
+ umum:["Kualitasnya di atas ekspektasi buat harga segitu, dan kepake hampir tiap hari di rumah.","Hasilnya sesuai deskripsi, nggak lebay, dan bikin rutinitas harian jadi lebih gampang.","Barangnya datang dengan kondisi mulus dan rapi, jadi langsung bisa dinikmati tanpa ribet.","Beberapa hari aja udah kerasa bedanya, dan aku nggak nyesel sama sekali."]
+};
+const NEW=[
+["ruang_makan",/\b(meja makan|kursi makan|taplak)\b/,"ruang makanku",["Ditata di ruang makan, jam makan bareng keluarga jadi lebih hangat dan rapi.","Ukurannya pas, nggak bikin ruangan sesak tapi tetep lega buat kumpul.","Gampang dibersihin habis makan, jadi nggak bikin males beres-beres."]],
+["sofa_tamu",/\b(sofa|meja kopi|meja tv|rak tv)\b/,"ruang tamuku",["Ditaruh di ruang tamu, ruangan yang tadinya kosong langsung berasa hangat buat nerima tamu.","Kokoh dan nyaman, jadi enak buat ngobrol berlama-lama bareng keluarga atau temen.","Modelnya simpel, gampang nyatu sama ruangan dan nggak makan banyak tempat."]],
+["lampu",/\b(lampu|led|neon|sunset|night light|string light)\b/,"sudut kamarku",["Dinyalain malam-malam, kamar langsung berasa hangat dan tenang, cocok buat rebahan.","Cahayanya lembut dan nggak bikin silau, jadi mata tetep nyaman walau nyala lama.","Ditaruh di pojok meja atau dipasang di dinding aja, suasana ruangan langsung beda."]],
+["cermin",/\b(cermin|kaca rias)\b/,"pojok kamarku",["Disandarin atau digantung di dinding, ruangan langsung keliatan lebih luas dan terang.","Bingkainya cantik, jadi bukan cuma buat ngaca tapi juga jadi hiasan dinding.","Bayangannya jelas dan nggak burem, enak banget buat cek penampilan sebelum berangkat."]],
+["rak_dapur",/\b(rak (piring|dapur|bumbu|besi|wajan|panci|spatula)|lazy susan|sink caddy|knife holder|organizer dapur|tempat (spatula|piring|sendok))\b/,"dapurku",["Dapur yang tadinya berantakan sekarang tertata, tiap barang punya tempatnya sendiri.","Ditaruh di sudut dapur atau di atas wastafel, nggak makan tempat tapi muat banyak.","Mau ambil bumbu, piring, atau pisau jadi gampang, nggak perlu bongkar-bongkar lagi."]],
+["wajan",/\b(wajan|penggorengan|wok|teflon|panci|frypan|pan)\b/,"dapurku",["Dipake masak tiap hari, makanan matengnya merata dan nggak gampang gosong.","Habis masak gampang dicuci, jadi nggak bikin males ngeberesin.","Pegangannya mantap di tangan, jadi nggak deg-degan pas ngangkat masakan."]],
+["alat_masak",/\b(spatula|talenan|telenan|pisau|sendok sayur|whisk|measuring|takaran|sutil|alat masak)\b/,"dapurku",["Ditaruh di tempatnya deket kompor, tinggal ambil pas lagi masak, nggak ribet.","Kerasa kokoh dan nyaman digenggam, jadi masak lebih lancar.","Bersihinnya gampang, setelah dicuci langsung bisa disimpen rapi."]],
+["toples",/\b(toples|stoples|jar|canister|kotak makan|wadah)\b/,"dapurku",["Isinya keliatan jelas dari luar, jadi nggak perlu buka satu-satu pas nyari bahan.","Tutupnya rapat, bikin bahan makanan tetep rapi dan terjaga.","Berjejer di rak dapur, kesannya langsung rapi dan estetik banget."]],
+["rt",/\b(sapu|pel|kain pel|kemoceng|setrika|power strip|stop kontak|trash bag|kantong sampah|sabun cuci|sunlight|pembersih lantai|spons)\b/,"urusan beres-beresku",["Bikin beres-beres rumah jadi lebih cepet, jadi nggak males lagi buat mulai.","Disimpen di sudut dekat pintu atau gudang, gampang diambil pas lagi butuh.","Hasilnya kerasa, lantai dan sudut rumah jadi keliatan lebih bersih dan rapi."]],
+["kamar_mandi",/\b(handuk|bathmat|keset|gayung|ember|shower|sabun mandi|sampo|shampoo|sikat gigi|pasta gigi|kloset|tempat sabun)\b/,"kamar mandiku",["Ditaruh di kamar mandi, urusan mandi pagi jadi lebih enak dan rapi.","Gampang dijangkau pas lagi mandi, nggak perlu bolak-balik nyari.","Kamar mandi keliatan lebih bersih dan tertata sejak ada ini."]],
+["wajah",/\b(face wash|sabun muka|pembersih wajah|toner|serum|pelembab|moisturizer|tabir surya|sunscreen|derma roller|cotton pad|blackhead|masker wajah)\b/,"mukaku",["Dipake pagi dan malam sebagai bagian dari rutinitas, jadi gampang banget dijadiin kebiasaan.","Teksturnya nyaman di kulit dan nggak ribet, cocok buat yang baru mulai skincare.","Habis dipake, muka kerasa lebih seger dan rapi, percaya diri pun ikut naik."]],
+["outdoor",/\b(kursi lipat|pot tanaman|gembor|penyiram|teras|taman)\b/,"terasku",["Ditaruh di teras, sore-sore jadi tempat favorit buat santai sambil ngopi.","Sudut luar rumah yang tadinya kosong jadi hidup dan asri.","Gampang dipindah-pindah, jadi bisa disesuaiin sama mood hari itu."]],
+["dekor_dinding",/\b(galeri|poster|hiasan dinding|wall decor|makrame|macrame|tanaman gantung|tanaman hias|bingkai|frame)\b/,"dinding kamarku",["Dipasang di dinding kosong, kamar yang tadinya polos langsung punya karakter.","Pasangnya nggak ribet, dan hasilnya langsung keliatan di foto kamar.","Tampilannya kalem dan estetik, jadi spot foto favorit di rumah."]],
+["perintilan",/\b(vas|lilin|pampas|jam meja|jam dinding|jam digital|pajangan|diffuser|aromaterapi|patung)\b/,"meja kamarku",["Ditaruh di meja atau rak, pojok yang biasa aja jadi keliatan niat.","Ukurannya kecil, tapi efeknya gede banget ke suasana ruangan.","Tinggal taruh aja tanpa ribet ngatur, langsung estetik."]],
+["tekstil",/\b(karpet|pouf|puf|bantal hias|bantal sofa|throw|rug|gorden|tirai|sheepskin)\b/,"pojok santaiku",["Ditaruh di sofa atau di ujung kasur, kesannya langsung hangat dan nyaman.","Teksturnya enak disentuh, bikin betah rebahan berlama-lama.","Warnanya netral, gampang nyatu sama dekor kamar yang udah ada."]]
+];
+NEW.slice().reverse().forEach(([k,re,kt,d])=>{TIPE.unshift([k,re]);KAT[k]=kt;DET[k]=d;});
+const EXT=["Aku sempet bandingin sama beberapa toko lain, dan yang ini paling masuk akal buat kantong.","Temen yang main ke rumah sampe nanyain beli di mana, jadi ya langsung aku kasih tau.","Pengirimannya cepet dan packing-nya rapi, jadi nggak ada drama pas paket sampai.","Awalnya cuma coba-coba, eh ternyata kepake terus tiap hari wkwk.","Harganya bersahabat, apalagi kalau lagi ketemu voucher atau gratis ongkir.","Kalau kamu tipe yang gampang ragu, baca dulu ulasan pembeli lain di Shopee, rata-rata puas kok.","Intinya ini bukan barang yang cuma bagus di foto doang, aslinya beneran oke.","Jujur nggak nyangka sih {k} bisa se-berubah ini cuma gara-gara satu barang."];
+EXT.push("Sumpah ya, awalnya aku cuek, eh sekarang malah jadi andalan banget.","Auto jadi bahan obrolan sama temen-temen, dasar emang wkwk.","Gak nyangka barang segini bisa bikin se-happy ini, parah sih.","Pokoknya bikin aku mikir: kenapa nggak dari dulu ya.","Anak tongkrongan sampe ikut kepo, ujung-ujungnya pada nanya link.","Mood-ku langsung naik level, serius nggak lebay.","Biasanya aku skeptis, tapi yang ini lolos sensor sih.","Kalau ditanya nyesel nggak, jawabanku: nggak sama sekali, gaes.");
+EXT.push("Awalnya aku ragu, soalnya udah sering kecewa beli barang yang cuma bagus di foto.","Pas paketnya dateng, aku buka pelan-pelan sambil deg-degan, takut ekspektasiku ketinggian.","Ternyata dugaanku meleset, dan aku langsung senyum-senyum sendiri di depan paketnya.","Sejak itu aku jadi sering cerita ke temen-temen, bahkan ke grup keluarga juga.","Aku tipe yang males ribet, jadi barang yang bikin hidup lebih gampang itu auto masuk daftar favorit.","Kadang hal kecil kayak gini yang bikin hari-hari terasa lebih ringan, ya nggak sih?","Aku nulis ini bukan buat pamer, cuma pengen berbagi biar kalian nggak salah pilih kayak aku dulu.","Kalau lagi bingung milih, tanya diri sendiri dulu: aku butuhnya yang beneran kepake atau cuma lucu doang.","Dan buat yang masih ragu, wajar banget, aku juga sempet mikir tiga kali sebelum checkout.","Sekarang tiap liat barang ini, rasanya kayak ketemu keputusan yang nggak bakal aku sesali.","Malam itu aku sampe nulis catatan kecil: jangan nunda-nunda lagi kalau udah yakin.","Pelan-pelan, kebiasaan kecilku ikut berubah, dan itu kerasa banget di keseharian.");
+const CTA=["Penasaran? Cek link Shopee di bawah ya, siapa tau masih ada promo. 🛒","Gaskeun cek link di bawah sebelum kehabisan stok, bestie! ✨","Kalau mau lihat detailnya, langsung aja ke link Shopee di bawah. 👇","Yang mau nyoba, linknya aku taruh di bawah ya, tinggal klik. 💖","Cuss intip dulu di link bawah, nggak rugi kok. 🔥","Link-nya ada di bawah, siapa cepat dia dapet! 🏃‍♀️","Mau ikutan? Checkout lewat link Shopee di bawah ya. 🛍️","Biar nggak penasaran, langsung aja klik link di bawah. 😆"];
+
+// 12 gaya, tiap gaya punya pembuka (h) & isi manfaat (m) sendiri
+const STY={
+"Curhat santai ke teman":{h:["Gue mau curhat dikit nih. Belakangan {k} lagi ribet banget, sampe akhirnya nyoba {p}.","Jujur ya, aku tuh tipe yang susah percaya review orang, tapi {p} bikin aku mikir ulang.","Ada yang mau denger cerita nggak? Soalnya {p} ini ngubah hari-hariku lebih dari dugaan."],m:["Yang paling kerasa tuh {m}, dan itu bikin aku lega banget.","Ternyata bener: {m}. Aku sampe nggak nyangka sih."]},
+"Obrolan dua teman":{h:["\"Eh, itu {p} baru lu beli ya? Bagus banget!\" Tanya temenku pas nongkrong kemarin.","\"Lu beli di mana sih? Kok kayaknya enak banget?\" Itu pertanyaan temenku soal {p}.","\"Serius lu puas sama {p}?\" \"Banget, tanya aja gue deh,\" jawabku mantap."],m:["Terus aku jelasin, intinya {m}. Dia langsung manggut-manggut.","Kujawab santai aja: {m}. Dia diem bentar, trus bilang 'oke fix beli'."]},
+"Cerita lucu sehari-hari":{h:["Pagi tadi aku sampe telat gara-gara kelamaan ngeliatin {p}. Dasar emang.","Kocak sih, kemarin pas {p} baru dateng, aku sampe muter-muter rumah nyari tempat buat pamer.","Kejadian absurd minggu ini: ibuku ikut ngelirik {p} dan sekarang bilang pengen punya juga. Wkwk."],m:["Alasannya sepele, tapi bener: {m}. Siapa coba yang nggak tergoda?","Ya gimana nggak rebutan, wong {m}. Pantes aja jadi rebutan satu rumah."]},
+"Rekomendasi jujur":{h:["Rekomendasi jujur tanpa endorse: kalau lagi cari yang pas, coba deh {p}.","Aku udah punya {p} cukup lama, jadi ini review apa adanya, bukan hasil kejar setoran.","Kalau ada yang nanya produk andalan, jawabanku sekarang {p}, dan alasannya jelas."],m:["Poin utamanya: {m}. Itu yang bikin aku masih setia sampai sekarang.","Yang bikin beda menurutku adalah {m}, dan itu kerasa nyata, bukan sekadar klaim."]},
+"Sebelum dan sesudah pakai":{h:["Sebelum ada {p}: {k} berantakan, males ngapa-ngapain. Sesudah ada: beda jauh!","Dulu aku sempet nyerah soal {k}. Tapi semenjak ada {p}, ceritanya jadi lain.","Before: ragu-ragu dan sering kecewa. After: nyaman banget berkat {p}."],m:["Perubahan yang paling nyata: {m}. Kerasa banget bedanya dari hari pertama.","Bukti nyatanya sederhana, yaitu {m}. Nggak perlu filter, nggak perlu gaya-gayaan."]},
+"Kesalahan yang aku sesali":{h:["Satu hal yang aku sesali: kenapa baru beli {p} sekarang, bukan dari dulu!","Kesalahan terbesarku bulan ini adalah nunda-nunda checkout {p}. Rugi banget sih.","Aku nyesel pernah milih yang murahan, baru ketemu {p} akhirnya ngerti bedanya."],m:["Soalnya {m}, dan itu baru kerasa setelah aku nyobain sendiri.","Coba bayangin: {m}. Kebuang deh waktu yang harusnya udah enak dari kemarin."]},
+"Pertanyaan pemancing komentar":{h:["Jujur nih, siapa di sini yang pernah ngerasa ribet banget soal {k}? Aku dulu juga.","Pernah nggak sih kalian nemu barang yang bikin hidup lebih gampang? Aku nemunya {p}.","Tim mana kalian: tetep sabar sama yang lama, atau pindah ke {p} kayak aku?"],m:["Alasanku pindah simpel: {m}. Kalau kalian gimana, setuju nggak?","Buatku, {m}. Nah, menurut kalian faktor paling penting apa? Tulis di komen ya!"]},
+"Tips singkat ala bestie":{h:["Tips dari bestie: jangan asal beli, pilih yang pas kayak {p} ini.","Quick tips buat kalian yang lagi cari yang bagus: cek dulu {p}, ini udah aku tes sendiri.","Bestie, dengerin ya. Kalau mau hemat dan nggak nyesel, {p} ini layak masuk keranjang."],m:["Tips pertamanya: pilih yang {m}. Itu kunci biar nggak zonk.","Cek dulu apakah {m}. Di {p} ini jawabannya iya, makanya aku berani rekomendasiin."]},
+"Plus minus apa adanya":{h:["Review plus minus {p}, biar kalian nggak beli kucing dalam karung.","Aku jabarin aja apa adanya soal {p}, nggak ada yang ditutup-tutupi.","Nggak ada produk sempurna, termasuk {p}, tapi ini hitungan jujur dari pengalamanku."],m:["Plusnya jelas: {m}. Itu alasan terbesar kenapa aku tetep setia.","Nilai plus utama: {m}. Minusnya paling cuma harus teliti pilih ukuran atau varian."]},
+"Lagi galau, lalu nemu solusi":{h:["Lagi galau parah soal {k}, rasanya mau nyerah aja. Terus nemu {p} pas iseng scroll.","Hari lagi berat, mood amburadul, tapi {p} datang kayak penyelamat dadakan.","Mau cerita, minggu kemarin hidup rasanya ruwet. Untung ada {p} yang bikin tenang."],m:["Solusinya sesederhana ini: {m}. Mood-ku langsung membaik, serius.","Ternyata yang aku butuhin cuma {m}. Siapa sangka masalahnya selesai segampang itu."]},
+"Hal kecil yang bikin hari lebih enak":{h:["Hal kecil yang bikin hariku lebih enak belakangan ini ternyata cuma {p}.","Kadang kebahagiaan itu sederhana, contohnya momen sederhana bareng {p} tiap hari.","Rutinitas pagiku berubah pelan-pelan, dan {p} jadi salah satu alasannya."],m:["Kecil sih, tapi {m}. Dan itu cukup buat bikin senyum sepanjang hari.","Detail sepele yang berarti: {m}. Rasanya hari jadi lebih ringan."]},
+"Racun belanja tengah malam":{h:["Jam 12 malam, niatnya cuma scroll, eh malah checkout {p}. Racun banget nih!","Warning: jangan buka Shopee tengah malam kalau nggak mau khilaf kayak aku sama {p}.","Dompet menjerit, tapi hati senang: {p} resmi masuk daftar belanja paling nggak nyesel."],m:["Pembelaanku sih: {m}. Jadi ini bukan boros, ini investasi.","Dan nggak sia-sia, soalnya {m}. Besoknya pas paket dateng aku langsung lega."]}
+};
+
+const STY_X={
+"Curhat santai ke teman":{m:"Capek mikirin hal ini lama-lama, dan ternyata {m}. Lega banget akhirnya nemu yang cocok.",c:["Kalau kamu lagi di posisi yang sama, intip link Shopee di bawah ya. 🤍","Udah ah curhatnya, linknya aku taruh di bawah kalau mau lihat. 🛒","Semoga kamu juga ketemu yang cocok, cek link di bawah ya. ✨"]},
+"Obrolan dua teman":{m:"Katanya dia, \"Masa sih?\" Kujawab, \"Coba aja, {m}.\" Eh dia beneran beli minggu ini.",c:["\"Linknya mana?\" Nih, aku taruh di bawah, tinggal klik. 👇","Dia minta link, jadi sekalian aku bagi ke kalian di bawah ya. 🛍️","Nanya linknya? Santai, ada di bawah kok. 😆"]},
+"Cerita lucu sehari-hari":{m:"Anehnya, bikin ketagihan gara-gara {m}. Sampe adikku ikut-ikutan rebutan.",c:["Kalau mau ikut kocak bareng, link Shopee ada di bawah ya. 😂","Penasaran sama kelanjutan ceritanya? Cek link di bawah aja. 🏃‍♀️","Silakan ketawain aku, tapi cek dulu link di bawah. 🤭"]},
+"Rekomendasi jujur":{m:"Alasan aku berani rekomendasiin sederhana: {m}. Itu yang kuuji sendiri, bukan sekadar baca deskripsi.",c:["Kalau cocok sama kebutuhanmu, link Shopee-nya ada di bawah. ✅","Silakan cek sendiri detailnya lewat link di bawah ya. 👍","Biar kamu bisa bandingin, aku taruh link produknya di bawah. 🔎"]},
+"Sebelum dan sesudah pakai":{m:"Kalau dibandingin sama yang lama, bedanya ada di sini: {m}. Kerasa jelas dalam beberapa hari.",c:["Pengen ngerasain perubahannya juga? Link di bawah ya. 🔄","Hasil nyatanya bisa kamu coba sendiri lewat link di bawah. ✨","Mau ikut upgrade? Cek aja link Shopee di bawah. 👇"]},
+"Kesalahan yang aku sesali":{m:"Gara-gara nunda, aku telat ngerasain bahwa {m}. Padahal harganya nggak bikin dompet nangis.",c:["Jangan telat kayak aku, cek link di bawah dari sekarang. ⏰","Kalian jangan ikutan nyesel ya, linknya ada di bawah. 🙏","Daripada nyesel belakangan, mending langsung lihat link di bawah. 🛒"]},
+"Pertanyaan pemancing komentar":{m:"Kalau aku pribadi, {m} itu nilai terpenting. Kalian lebih utamain yang mana? Jawab di komen yuk!",c:["Udah pernah coba juga? Cerita di komen, link produknya di bawah. 💬","Mau coba dulu? Link-nya di bawah, hasilnya bagi-bagi di komen ya. 👇","Yang tertarik, ketik 'mau' di komen atau langsung cek link di bawah. 🙋"]},
+"Tips singkat ala bestie":{m:"Ingat satu patokan: pastikan {m}. Kalau itu terpenuhi, biasanya aman dari kecewa.",c:["Simpan tips ini, terus cek produknya di link bawah ya. 📌","Biar praktis, link Shopee aku taruh di bawah. Tinggal klik! ⚡","Save postingan ini dulu, siapa tau butuh nanti. Link di bawah ya. 💡"]},
+"Plus minus apa adanya":{m:"Dari sisi plus, {m}. Dari sisi minus, ya tetep teliti baca ukuran dan varian sebelum checkout.",c:["Pertimbangin sendiri ya, detailnya bisa dicek lewat link di bawah. ⚖️","Biar adil, baca juga ulasan lain di link Shopee bawah ya. 📝","Kalau plusnya cocok buatmu, link produknya ada di bawah. ✅"]},
+"Lagi galau, lalu nemu solusi":{m:"Ternyata solusinya nggak jauh-jauh: {m}. Dada yang tadinya sesak jadi agak plong.",c:["Kalau kamu lagi galau juga, mungkin ini bisa bantu. Link di bawah ya. 🌧️","Semoga membantu kamu juga, link Shopee ada di bawah. 🤍","Pelan-pelan aja, kalau mau lihat produknya cek link di bawah. 🌱"]},
+"Hal kecil yang bikin hari lebih enak":{m:"Hal sepele kayak {m} ternyata ngaruh banget ke mood seharian. Kecil tapi terasa.",c:["Kalau mau nambah hal kecil yang enak di harimu, cek link di bawah. ☕","Kebahagiaan kecil ini linknya ada di bawah ya. 🌼","Siapa tau cocok jadi bagian rutinitasmu juga, link di bawah. 🌤️"]},
+"Racun belanja tengah malam":{m:"Racunnya ampuh karena {m}. Checkout jam segini rasanya cuma nyesel sedetik, abis itu lega.",c:["Siap-siap khilaf bareng, link Shopee ada di bawah. 🛒🔥","Kalian udah aku racunin, nih linknya di bawah. 😈","Awas dompet bergetar, tapi link-nya tetep aku taruh di bawah. 💸"]}
+};
+for(const k in STY_X){STY[k].m.push(STY_X[k].m);STY[k].c=STY_X[k].c;}
+
+const _pk=a=>a[Math.floor(Math.random()*a.length)];
+function gaulin(s){
+  let t=" "+s+" ";
+  t=t.replace(/\bsangat\s+([a-zA-Z]+)/gi,(x,w)=>w+" "+_pk(["banget","parah","pol"]));
+  t=t.replace(/\b([a-zA-Z]+)\s+sekali\b/gi,(x,w)=>w+" "+_pk(["banget","parah","bgt"]));
+  const kamus=[
+    [/\btidak\b/gi,["nggak","gak","ga"]],[/\bmembuat\b/gi,["bikin"]],[/\bmenjadi\b/gi,["jadi"]],
+    [/\bmemberikan\b/gi,["ngasih","kasih"]],[/\bsehingga\b/gi,["jadi","makanya"]],[/\bagar\b/gi,["biar"]],
+    [/\buntuk\b/gi,["buat"]],[/\bdapat\b/gi,["bisa"]],[/\bkarena\b/gi,["gara-gara","soalnya"]],
+    [/\bmudah\b/gi,["gampang","enteng"]],[/\bcepat\b/gi,["cepet","kilat"]],[/\bbagus\b/gi,["oke punya","kece","mantul"]],
+    [/\bmurah\b/gi,["ramah di kantong","murmer"]],[/\btahan lama\b/gi,["awet parah","awet"]],[/\bringan\b/gi,["enteng","ringan"]],
+    [/\bnyaman\b/gi,["enak","adem","nyaman"]],[/\bhanya\b/gi,["cuma"]],[/\bsudah\b/gi,["udah"]],
+    [/\btetapi\b/gi,["tapi"]],[/\blebih\b/gi,["lebih","makin"]],[/\bbanyak\b/gi,["banyak","segambreng"]],[/\bpraktis\b/gi,["simpel","praktis"]]
+  ];
+  for(const [re,alt] of kamus) t=t.replace(re,()=>_pk(alt));
+  return t.trim();
+}
+function pecahManfaat(m){
+  const f=m.split(/[,;\n.]+|\s+(?:dan|serta|plus|&)\s+/i).map(x=>x.trim()).filter(x=>x.length>2);
+  return f.length?f:[m];
+}
+function variasiGaul(t){
+  return t.replace(/\bbanget\b/g,()=>_pk(["banget","banget","parah","bgt"]))
+    .replace(/\bnggak\b/g,()=>_pk(["nggak","gak","ga"]))
+    .replace(/\bbestie\b/g,()=>_pk(["bestie","gaes","guys"]))
+    .replace(/\bwkwk\b/g,()=>_pk(["wkwk","wkwkwk","hehe"]))
+    .replace(/\bJujur\b/g,()=>_pk(["Jujur","Sumpah","Serius"]));
+}
+function racikPostinganPintar(nama,manfaat,gaya,link){
+  const info=bacaLinkShopee(link);
+  const pn=(nama||info.nama||"produk ini").trim();
+  const tipe=analisaProduk(pn+" "+manfaat+" "+info.slug);
+  let m=(manfaat||"").trim().replace(/[.!\s]+$/,"")||"kualitasnya di atas ekspektasi, kepake banget tiap hari, bikin rutinitas jadi lebih gampang, nggak bikin nyesel";
+  if(/^[A-Z][a-z]/.test(m)) m=m[0].toLowerCase()+m.slice(1);
+  const frags=pecahManfaat(m);
+  const ambilManfaat=i=>{
+    let x;
+    if(frags.length>=2){
+      x=frags[(i+Math.floor(Math.random()*frags.length))%frags.length];
+      if(Math.random()<0.3){const y=_pk(frags);if(y!==x)x=x+" "+_pk(["plus","terus","belum lagi"])+" "+y;}
+    } else x=frags[0];
+    return gaulin(x);
+  };
+  const sub=(t,mm)=>t.replace(/\{p\}/g,()=>pn).replace(/\{m\}/g,()=>mm||m).replace(/\{k\}/g,()=>KAT[tipe]);
+  const S=STY[gaya]||STY["Curhat santai ke teman"];
+  const hooks=acakArray(S.h),mids=acakArray(S.m),cta=acakArray(S.c),det=acakArray(DET[tipe]),out=[];
+  for(let i=0;i<3;i++){
+    let best="";
+    for(let t=0;t<40;t++){
+      const parts=i===1?[hooks[i],det[i],mids[i]]:[hooks[i],mids[i],det[i]];
+      const ex=acakArray(EXT);let k=0;
+      const mm=ambilManfaat(i);
+      const tulis=()=>variasiGaul(sub(parts.concat(cta[i]).join(" "),mm));
+      while(hitungKata(tulis())<170&&k<ex.length) parts.push(ex[k++]);
+      const teks=tulis(),w=hitungKata(teks);
+      if(w>=170&&w<=230){best=teks;break;}
+      if(!best) best=teks;
+    }
+    out.push(best);
+  }
+  return out;
+}
+
+// ===== Penulis AI (Claude) — tiap postingan ditulis baru, bukan template =====
+let _sampleP=null;
+function ambilSample(){
+  if(!_sampleP) _sampleP=(async()=>{try{return window.claude?await window.claude.use("sample"):null}catch(e){return null}})();
+  return _sampleP;
+}
+// Di claude.ai pakai fitur sample; di Vercel pakai endpoint /api/generate (lihat api/generate.js)
+async function panggilAI(sample,p){
+  if(sample) return await sample.json(p,{cache:false});
+  const r=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:p,link:window.__link||""})});
+  if(!r.ok) throw new Error("http "+r.status);
+  const d=await r.json();
+  return JSON.parse((d.text||"").replace(/```json|```/g,"").trim());
+}
+async function tulisAI(prod,manf,emosi,target,link){
+  window.__link=link;
+  const sample=await ambilSample();
+  const info=bacaLinkShopee(link);
+  const nama=(prod||info.nama||"").trim();
+  const tipe=analisaProduk(nama+" "+manf+" "+info.slug);
+  const prompt=`Kamu penulis konten Threads Indonesia yang jago bercerita dengan bahasa gaul santai (aku/kamu/gue, nggak, banget, sumpah, dll).
+
+Tulis TEPAT 3 postingan Threads yang berbeda total untuk produk ini:
+- Nama produk: ${nama||"(tidak terbaca dari link; cari tahu dari info halaman atau web search)"}
+- Link Shopee: ${link}
+- Jenis produk (perkiraan): ${tipe==="umum"?"tidak diketahui, simpulkan dari nama":tipe}
+${manf?"- Manfaat utama dari penjual: "+manf:"- Manfaat utama: simpulkan sendiri dari jenis produk dan info halaman. Jangan mengarang spesifikasi, angka, atau klaim yang tidak pasti."}
+${info.slug?"- Nama dari URL Shopee: "+info.slug:""}
+
+Emosi dominan: "${emosi}". Rasa ini harus terasa kuat dari kalimat pertama sampai penutup.
+
+Target pembaca: ${TARGETDESC[target]||TARGETDESC["Publik"]}
+
+Aturan:
+1. Setiap postingan 170-210 kata (hitung dengan teliti), berbentuk cerita panjang beralur: pembuka, situasi/konflik, momen menemukan produk, dampak yang dirasakan, penutup hangat. Ini ukuran paling penting.
+2. Isinya CERITA nyata terasa seperti pengalaman pribadi, bukan iklan. Pembaca harus tenggelam di cerita dulu; produk muncul alami di tengah, ajakan cek link cukup 1 kalimat pendek di akhir yang menyebut link ada di bawah (kalimat ajakan ini WAJIB jadi kalimat TERAKHIR; sistem akan memindahkannya ke tengah cerita).
+3. Ketiganya wajib berbeda: pembukaan, adegan/situasi, sudut pandang, dan pilihan kata. Jangan ada frasa yang sama antar postingan dan jangan pakai klise iklan ("worth it banget", "wajib punya", "sebelum kehabisan").
+4. Gunakan detail spesifik yang masuk akal sesuai jenis produk. Jangan mengarang fakta yang bisa dicek: harga, angka diskon, durasi garansi, klaim medis, nama merek lain, atau testimoni orang lain.
+5. Maksimal 2 emoji per postingan. Jangan sertakan URL (akan ditambahkan otomatis). Tanpa hashtag.
+6. Jangan bawa-bawa topik sensitif (agama, politik, SARA).
+7. JANGAN menyalin kata-kata "Manfaat utama" mentah-mentah. Olah ulang dengan bahasamu sendiri: pakai sinonim gaul, perumpamaan, atau adegan kecil. Tiap postingan angkat sudut manfaat yang berbeda dan pakai pilihan kata gaul yang berbeda (misal banget/parah/pol, nggak/gak, bikin/ngasih, enak/adem/mantul).
+9. Pahami fungsi dan cara penggunaan produk secara masuk akal. Furnitur seperti meja, kursi, rak itu ditaruh/dipasang di kamar, ruang kerja, atau ruang tengah (misal meja ditaruh di pojok kamar dekat komputer), BUKAN "dipakai" seperti baju. Baju dipakai, kursi diduduki, lampu dipasang, makanan dimakan. Jangan pernah pakai kata kerja yang janggal untuk produknya.
+8. Boleh pakai slang kekinian yang wajar (sumpah, gaes, auto, kepo, mantul, receh), tapi jangan berlebihan dan tetap enak dibaca.
+
+Balas HANYA JSON array berisi 3 string, tanpa teks lain.`;
+  for(let a=0;a<2;a++){
+    try{
+      const arr=await panggilAI(sample,a?prompt+"\n\nCatatan: percobaan sebelumnya panjangnya meleset. Pastikan setiap postingan 170-210 kata.":prompt);
+      if(Array.isArray(arr)&&arr.length>=3){
+        const r=arr.slice(0,3).map(x=>String(x).trim());
+        if(a===1||r.every(x=>{const w=hitungKata(x);return w>=150&&w<=240})) return r;
+      }
+    }catch(e){ if(e&&(e.code==="not_granted"||e.code==="rate_limited")) return null; }
+  }
+  return null;
+}
+
+function sisipLink(teks,link){
+  const p=teks.trim().replace(/([.!?])\s+(?=[A-Z"“'])/g,"$1\u0001").split("\u0001");
+  if(p.length<3) return teks+"\n\n"+link;
+  let cta=p.pop();
+  if(p.length>2&&p[p.length-1].trim().split(/\s+/).length<=2) cta=p.pop()+" "+cta;
+  const mid=Math.ceil(p.length/2);
+  return p.slice(0,mid).join(" ")+"\n\n"+cta+"\n"+link+"\n\n"+p.slice(mid).join(" ");
+}
+$("go").onclick = async () => {
+  const prod = $("prod").value.trim();
+  const manf = "";
+  const link = $("link").value.trim();
+  const emosi = $("emosiVal").value, target = $("targetVal").value, gaya = EMO2STY[emosi] || "Curhat santai ke teman";
+
+  const infoL = bacaLinkShopee(link);
+  if (link && !infoL.valid){ galat($("platform").value==="tiktok"?"Link sepertinya bukan link TikTok. Tempel link dari tiktok.com atau vt.tiktok.com ya.":"Link sepertinya bukan link Shopee. Tempel link produk dari shopee.co.id atau shope.ee ya."); return; }
+  if (!link){ galat("Tempel link "+($("platform").value==="tiktok"?"TikTok":"Shopee")+" dulu ya, nanti AI yang cari tahu produknya."); return; }
+
+  const btn = $("go"); btn.disabled = true; btn.textContent = "AI Mengenali Produk & Menulis…"; $("out").innerHTML = "";
+
+  let posts = null;
+  try { posts = await tulisAI(prod, manf, emosi, target, link); } catch (e) {}
+  if (!posts) posts = racikPostinganPintar(prod, manf, gaya, link);
+  if($("platform").value==="tiktok") posts=posts.map(x=>x.replace(/Shopee/g,"TikTok"));
+  tampil(link ? posts.map(x => sisipLink(x, link)) : posts);
+  btn.disabled = false;
+  btn.textContent = "Buat postingan";
+};
+
+</script>
+</body>
+</html>
